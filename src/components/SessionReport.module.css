@@ -1,0 +1,126 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.navRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.navTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+.page {
+  flex: 1;
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.scoreCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.verdictBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.verdictSub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sectionLabel {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.section { margin-bottom: 1.25rem; }
+
+.metaTable { width: 100%; border-collapse: collapse; }
+.metaKey {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border);
+  width: 45%;
+}
+.metaVal {
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--text);
+  text-align: right;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.flagList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.noFlags {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.textPreview {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+  max-height: 320px;
+  overflow-y: auto;
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  padding: 1rem;
+  border: 1px solid var(--border);
+}
+
+.dangerZone {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .topGrid { grid-template-columns: 1fr; }
+  .page    { padding: 1.5rem 1rem; }
+}

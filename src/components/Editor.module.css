@@ -1,0 +1,101 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.titleInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  width: 260px;
+}
+.titleInput::placeholder { color: var(--text-dim); }
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.statsBar {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  flex-wrap: wrap;
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.elapsed {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.monitor {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.editor {
+  flex: 1;
+  padding: 3rem 4rem;
+  outline: none;
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--bg);
+  resize: none;
+  border: none;
+  font-family: var(--font-sans);
+  letter-spacing: 0.01em;
+  caret-color: var(--accent);
+  min-height: 500px;
+}
+.editor::placeholder {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.pasteBanner {
+  background: rgba(245, 158, 11, 0.1);
+  border-top: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  color: var(--warning);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .editor { padding: 2rem 1.5rem; }
+  .statsBar { gap: 0.75rem; }
+}
