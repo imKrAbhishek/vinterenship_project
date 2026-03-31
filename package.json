@@ -5,6 +5,7 @@
   "description": "Authenticity verification platform that ensures genuine human writing through keyboard activity monitoring",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
